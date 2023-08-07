@@ -1,0 +1,101 @@
+OPERADORES:
+
+https://www.youtube.com/watch?v=hZG9ODUdxHo&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm&index=10
+
+
+
+
+Aritméticos
+
+5 + 2  = 7
+5 - 2  = 3
+5 * 2  = 10
+5 / 2  = 2.5 (divisão real. leva a vírgula em consideração)
+5 % 2  = 1 ( resto da divisãoa inteira)
+5 ** 2 = 25 (potência)
+
+Órdem de Precedência
+
+1°- ()
+2°- **
+3°- */% (estão na mesma ordem com mesma hierarquia. e caso mais de um eles apareça na expressão, iremos resolver oque aparecer primeiro da esquerda para direita.)
+4°- +-
+
+Ex:
+<node>
+        > var a = 5 + 3
+        > a
+        8
+        > var b = a % 5
+        > b
+        3
+        > var c = 5 * b ** 2
+        > c
+        45
+        > var d = 10 - a / 2
+        > d
+        6
+        > var e = 6 * 2 / d
+        > e
+        2
+        > var f = b % e + 4 / e
+        > f
+        3
+        >
+
+
+Auto atribuição
+
+> var n = 3 (Atribuição simples)
+undefined
+> n
+3
+> n = n + 4 (Auto atribuição)
+  n += 4 (simplificada)
+7
+> n = n - 5
+  n -= 5
+2
+> n = n * 4
+  n *= 4
+8
+> n = n /2
+  n /= 2
+4
+> n = n**2
+  n **= 2
+16
+> n = n % 5
+  n %= 5
+1
+
+Prático:
+> var num = 8
+undefined
+> num
+8
+> num+=2
+10
+> num %= 2
+0
+> num = 3
+3
+> num **=2
+9
+>
+
+Incremento:
+
+
+ > var x = 4 (atribuição simples)
+undefined
+> x =x+1     (auto atribuição)
+5
+> x+=1       (atribuição simplificada)
+6
+> ++x        (Incremento)
+7
+
+
+O incremento equivale ao  número somado a 1
+Obs: ++x ( pré incremento). x++ (pós incremento)

@@ -1,0 +1,193 @@
+Tratamento de dados
+
+https://www.youtube.com/watch?v=OJgu_KCCUSY&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm&index=9
+
+comentários em:
+js: //
+CSS:/**/
+html: <!-- -->
+
+Inserindo e lendo dados:
+Ex:
+<script>
+        let nome = window.prompt('Qual é o seu nome?') //Vai perguntar o nome.
+        window.alert('É um grande prazer te conhecer ' + nome + '!') // vai criar um alert para mostrar a resposta. "+" é ums inal de contaneção
+</script>
+
+Ex-02:
+
+
+        <script>
+            var n1 = window.prompt('Digite um número: ')
+            ex: 4
+
+            var n2 = window.prompt('Digite outro número: ')
+            ex: 2
+
+            var soma = n1+n2
+            window.alert('a soma dos valores é ' + soma)
+            resultado: 42
+        </script>
+
+
+ao inves de somar ele apenas concatena.
+number + number = adição.
+string +string = concatenação.
+O "window.prompt" retorna por padrão, uma string.
+
+CONVERTENDO DE STRING PARA NUMBER.
+
+Números inteiros = Number.parseInt(n)
+Números Reais = Number.parseFloat(n)
+Obs: "N" maiusculo e o "I/F" maiúsculo.
+Prático:
+
+
+        <script>
+            var n1 = Number.parseInt(window.prompt('Digite um número: '))
+            ex: 4
+            
+            var n2 = Number.parseInt(window.prompt('Digite outro número: '))
+            ex: 2
+
+            var soma = n1+n2
+            
+            window.alert('a soma dos valores é ' + soma)
+        </script>
+        resultaado: 6
+
+
+Se digitarmos numeros com virgula, ele somará apenas a parte inteira, por isso é preciso conterter para cada tipo de dado.
+
+O modo mais atual simplificou isso. Agorapodemos usar apenas "Number(n)".
+Ex:
+        <script>
+                var n1 = Number(window.prompt('Digite um número: '))
+                ex: 2.5
+
+                var n2 = Number(window.prompt('Digite outro número: '))
+                ex: 3
+
+                var soma = n1+n2
+
+                window.alert('a soma dos valores é ' + soma)
+        </script>
+        resultado: 5.5
+
+
+CONVERTENDO DE NUMBER PARA STRING
+
+1°- String(n)
+2°- n.toString()
+
+
+FORMATAÇÃO COM NOVAS STRINGS
+
+
+node
+
+> nome = 'pedro'
+'pedro'
+> idade =41
+41
+> nota = 5.5
+5.5
+> nome
+'pedro'
+> idade
+41
+> nota
+5.5
+> 'O aluno '+ nome +'de ' + idade +' anos, tirou nota: '+ nota
+'O aluno pedro de 41 anos, tirou nota: 5.5'
+>
+
+na verção mais recente de js tem um forma muito mais legal de se fazer chamada "templateStrings"
+Ex:
+> `O aluno ${nome} com ${idade} anos, tirou a nota ${nota} `
+'O aluno pedro com 41 anos, tirou a nota 5.5 '
+>
+Prática:
+        <script>
+            var n1 = Number(window.prompt('Digite um número: '))
+            ex: 4
+            
+            var n2 = Number(window.prompt('Digite outro número: '))
+            ex: 2
+            
+            var soma = n1+n2
+        
+            window.alert(`A soma entre ${n1} e ${n2} é: ${soma}`)
+        </script>
+
+
+FUNCIONALIDADES
+
+var s = 'JavaScript'
+
+s.length = Quantos caracteres tem a string
+s.toUperCase() = Tudo maiúsculo.
+s.toLowerCase() = Tudo minúsculo.
+Obs: U/C e L/C maiúsculo.
+
+Prático:
+        <script>
+            var nome = window.prompt('Qual é seu nome?')
+            document.write(`Seu nome tem ${nome.length} letras`)
+            ex: Zoiuda
+        </script>
+        resposta: Seu nome tem 6 letras.
+
+Também podemos inserir  tags html dentro do templateStrings.
+Ex:
+         <script>
+            var nome = window.prompt('Qual é seu nome?')
+            document.write(`<h2>Seu nome tem ${nome.length</h2>} letras`)
+            ex: Zoiuda
+        </script>
+        resposta: Seu nome tem 6 letras. com as caracterpisticas de h2.
+
+Ex-02:
+        <script>
+            var nome = window.prompt('Qual é seu nome?')
+            
+            document.write(`Olá <strong>${nome}</strong>! seu nome tem ${nome.length} letras.<br>`)
+
+            document.write(`Seu nome em maiúsculas é: ${nome.toUpperCase()}<br>`)
+
+            document.write(`Seu nome em minúsculas é: ${nome.toLowerCase()}`)
+        </script>
+        resposta: nome em negrito...
+
+
+
+
+FORMATANDO NÚMEROS:
+
+Método interno de number chamado: toFixed.
+Ex:
+        > var n1 = 1540.5
+        undefined
+        > n1
+        1540.5
+        > n1.toFixed(2)
+        '1540.50'
+        > n1.toFixed(2).replace('.', ',')
+        '1540,50'
+        >
+
+
+
+Método para converter para dinheiro.
+n1.toLocaleString('país', {style: moeda(currency), e essa moeda será BRL/USD/EUR})
+
+Ex:
+        > n1.toLocaleString('pt-br', {style: 'currency', currency: 'USD'})
+        'US$ 1,540.50'
+
+        > n1.toLocaleString('pt-br', {style: 'currency', currency: 'EUR'})
+        '€ 1,540.50'
+
+        > n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}).replace(',', '.', '.', ',')
+        'R$ 1.540,50' /* onde for ponto será vírgula e onde for vírgula, será ponto*/
+        >

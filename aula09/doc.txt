@@ -1,0 +1,97 @@
+DOM 
+
+https://www.youtube.com/watch?v=WWZX8RWLxIk&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm&index=13
+
+Document Object Model
+
+Conjunto de elementos dentro do seu navegador que vai dar acesso aos componentes internos do site. O DOM não funciona dentro do nodeJS
+
+Árvore DOM
+
+wndow
+    location
+    Document
+        html
+            head
+                meta
+                title
+                ...
+            body
+                h1
+                p
+                p
+                    strong
+                div
+    history
+
+SELECIONANDO ELEMENTOS.
+
+- Por marca
+
+getElementsByTagName()
+
+Permite selecionar varios elementos da mesma tag
+
+Prático:
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p1')[1]
+        document.write(p1.innerText)
+    </script>
+</body>
+Faz imprimir na janela, o p1 [1] (segundo parágrafo)
+- innerText pega o texto sem as filhas. não mostrando o strong
+- innerHTML pega as filhas
+
+
+
+
+-id
+detElementById()
+
+seleciona apenas o elemento do "id"
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerHTML = 'Estou aguardando'
+    </script>
+</body>
+
+-nome
+getElementsByTagName()
+
+
+-classe
+getElementsByClassName()
+
+seleciona todos os elementos da "class"
+
+-Seletor
+querySelector()
+querySelectorAll()
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+    </script>
+</body>
+
+Obs: 
+'div#msg' se for "id"
+'div.msg' se for "class"
+'div' ele vai pegar apenas a primeira "div" que aparecer

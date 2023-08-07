@@ -1,0 +1,196 @@
+OPERADORES (PARTE-02):
+
+https://www.youtube.com/watch?v=BP63NhITvao&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm&index=11
+
+-Relacionais: toda expressão que tenha um operador relacional, o resultado será um vlor bouleano. (True/False)
+
+5 > 2 : True
+5 < 2 : False
+8 >= 8 : True 
+9 <= 7 : False
+5 == 5 : True
+4 != 4 : False
+
+Obs: Se tivermos operadores aritméticos e ralacionais na mesma linha, primeiro resolvemos os aritiméticos, deposi os relacionais.
+
+Prático:
+    > var a = 8
+    undefined
+    > var b= 15
+    undefined
+    > a > b
+    false
+    > a < b
+    true
+    > a <= b - 10
+    false
+    > a == b
+    false
+    > a != b
+    true
+    >
+
+
+-Identidade(igualdade restrita):
+
+5 == 5    : True
+5 == '5'  : True
+5 === '5' : False
+5 === 5   : True
+
+Além de possuir o mesmo valor, ele precisa ser do mesmo tipo
+
+Prática:
+
+    > 5 == '5'
+    true
+    > var x = 5
+    undefined
+    > var y = '5'
+    undefined
+    > typeof x
+    'number'
+    > typeof y
+    'string'
+    > x == y
+    true
+    > x === y
+    false
+    > x !== y (desidêntico)
+    true
+    >
+
+
+- Lógicos:
+
+!  : negação
+&& : conjunção (and) 
+|| : disjunções (or)
+
+Obs: Órdem de operação.
+
+1°- Operadores aritiméticos
+2°- Operadores relacionais
+3°- Operadores Lógicos.
+    (Caso tenha mais de um na mesma linha
+    1°- !
+    2°- &&
+    3°- ||    
+    )
+
+Prática:
+    > var a = 5
+    undefined
+    > var b = 8
+    undefined
+    > true && false (Algo não pode ser verdadeiro e falso ao memo tempo)
+    false
+    > true && true
+    true
+    > false || false
+    false
+    > true || false
+    true
+    > true && true
+    true
+    > true || true
+    true
+    > a > b && b % 2 == 0
+    false
+    > a <= b || b / 2 == 2
+    true
+    >
+
+Prática-02:
+
+    > var idade = 16
+    undefined
+    > var estado = 'RN'
+    undefined
+    > var salario = 1500
+    undefined
+    > var sexo = 'M'
+    undefined
+    > idade >= 15 && idade <= 17
+    true
+    > estado == 'RJ' || estado == 'SP'
+    false
+    > salario > 1500 && sexo != 'M'
+    false
+    >
+
+
+
+- Ternário:
+ternário por juntar três elementos na operação.
+teste  ?    true   :   false
+
+Ex:
+média >= 7.0   ?    'Aprovado'     :    'Reprovado' 
+
+Prático:
+
+    > var media = 5.5
+    undefined
+    > media > 7 ? 'Aprovado' : 'Reprovado'
+    'Reprovado'
+    > media +=3
+    8.5
+    > media > 7 ? 'Aprovado'  : 'Reprovado'
+    'Aprovado'
+    >
+
+Prático-02:
+    
+    > var x = 8
+    undefined
+    > var res = x % 2 == 0 ? 5 : 9
+    undefined
+    > x
+    8
+    > res
+    5
+    >
+    Se o valor de "res" for "true", então ele recebe 5, do contrário, recebe 9.
+
+
+    > var idade = 19
+    undefined
+    > var r = idade >= 18 ? 'MAIOR'  : 'MENOR'
+    undefined
+    > r
+    'MAIOR'
+    >
+    Se o valor de r for "true", então ele recebe "MAIOR", do contrário, recebe "MENOR".
+
+
+
+
+RESUMO:
+
+ÓRDEM DE PRECEDÊNCIA
+
+1°- Aritiméticos:
+    1°- ()
+    2°- **
+    3°- *, /, % (O que aparecer primeiro)
+    4°- +-
+
+
+
+2°- Relacionais:
+    >,  <,  >=,  <=,  ==, !=, ===, !== (sem órdem de precedência)
+
+
+
+3°- Lógicos:
+    1°- ! (not)
+    2°- && (and)
+    3°- || (or)
+
+
+
+4°- Ternário:
+    1°- Teste lógico (true/false)
+    2°- ? (então)
+    3°- : (do contrário)

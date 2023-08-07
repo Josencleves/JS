@@ -1,0 +1,122 @@
+ENVENTOS DOM
+
+
+https://www.youtube.com/watch?v=wWnBB-mZIvY&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm&index=14
+
+eventos: Tudo o que pode acontecer
+
+eventos de mouse:
+
+onmouseenter - quando o mouse entra
+onmousemove  - quando o mouse se movimenta
+onmousedown  - quando eu seguro o click
+onmouseup    - quando eu solto o click
+onclick - Clicar e soltar rapidamente
+onmouseout - quando o mouse sai
+
+novidade são os "toutch events" que se referem aos tipos de toques na tela do celular: 
+Ex:
+abrindo os dedos = zoon
+e dedos = Print...
+
+
+
+
+
+- Função
+
+conjunto de linhas que vão ser executadas apenas quando um evento ocorrer. Funções precisam ser inseridas em blocos e bloco é tudo o que está entre {}, a função também precisa ser nomeada com "function".
+
+Ex:
+funtion ação(parâmetro){
+    ...
+}
+
+
+
+
+Prático:
+
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+    <script>
+        function clicar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'clicou'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'Entrou'
+        }
+        function sair(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'saiu'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+
+utilizando a variavel local o codigo fica muito maior. podemos utilizar de forma global.
+
+
+
+
+
+Ex-02:
+
+Deixando a "var" fora das "function" ela fica de forma global o que faz reduzir o "JavaScript"
+
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        function clicar(){
+            a.innerText = 'clicou'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            a.innerText = 'Entrou'
+        }
+        function sair(){
+            a.innerText = 'saiu'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+
+
+
+
+
+também podemos utilizar tanto a função quanto a chamada no JavaScript deixando o html limpo, utilizando o "addEventListener()".
+Ex:
+
+<body>
+    <div id="area"> // 
+        Interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar(){
+            a.innerText = 'clicou'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            a.innerText = 'Entrou'
+        }
+        function sair(){
+            a.innerText = 'saiu'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+
+
