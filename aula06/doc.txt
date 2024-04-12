@@ -30,7 +30,7 @@ Ex-02:
         </script>
 
 
-ao inves de somar ele apenas concatena.
+ao inves de somar ele apenas concatenar.
 number + number = adição.
 string +string = concatenação.
 O "window.prompt" retorna por padrão, uma string.
@@ -164,10 +164,9 @@ Ex-02:
 
 FORMATANDO NÚMEROS:
 
-Método interno de number chamado: toFixed.
-Ex:
+Método interno de number chamado: "toFixed" e "replace".
+Ex:     Node:
         > var n1 = 1540.5
-        undefined
         > n1
         1540.5
         > n1.toFixed(2)
@@ -176,12 +175,23 @@ Ex:
         '1540,50'
         >
 
+        JavaScript:
+        let s = 1345.3
+        document.write(`- Seu salário é de: R$${s}<br>`)
+
+        //para números com duas casas decimais.
+        document.write(`- Dois números depois do ponto: R$${s.toFixed(2)}<br>`)
+
+        //Para subtituir o ponto por vírgula.
+        document.write(`- vírgula no lugar de ponto: R$${s.toFixed(2).replace('.',',')}<br>`)
+
 
 
 Método para converter para dinheiro.
-n1.toLocaleString('país', {style: moeda(currency), e essa moeda será BRL/USD/EUR})
+n1.toLocaleString('país', {style: moeda(currency), e essa moeda(currency) será BRL/USD/EUR})
 
 Ex:
+        Node
         > n1.toLocaleString('pt-br', {style: 'currency', currency: 'USD'})
         'US$ 1,540.50'
 
@@ -191,3 +201,14 @@ Ex:
         > n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}).replace(',', '.', '.', ',')
         'R$ 1.540,50' /* onde for ponto será vírgula e onde for vírgula, será ponto*/
         >
+
+        JavaScript
+        //Inserindo dinheiro
+        //Real
+        document.write(`- inserindo Real: ${s.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}<br>`)
+
+        //Dolar
+        document.write(`- inserindo Dolar: ${s.toLocaleString('pt-br', {style:'currency', currency:'USD'})}<br>`)
+
+        //Euro
+        document.write(`- inserindo Euro: ${s.toLocaleString('pt-br', {style:'currency', currency:'EUR'})}<br>`)

@@ -7,7 +7,7 @@ usamos os seguintes simbolos para inserir comentários em js.
 /*
 mais de uma linha de 
 comentário.
-*
+*/
 
 VARIÁVEIS
 
