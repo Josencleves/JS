@@ -11,7 +11,7 @@ https://www.youtube.com/watch?v=BP63NhITvao&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIb
 5 == 5 : True
 4 != 4 : False
 
-Obs: Se tivermos operadores aritméticos e ralacionais na mesma linha, primeiro resolvemos os aritiméticos, deposi os relacionais.
+Obs: Se tivermos operadores aritméticos e ralacionais na mesma linha, primeiro resolvemos os aritiméticos, depois os relacionais.
 
 Prático:
     > var a = 8

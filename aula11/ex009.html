@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Imigração</h1>
+    
+    <label>vai</label>
+    <input type="text" placeholder="Seu pais" id="p" >
+    
+    <input type="submit" value="enviar" id="enviar" onclick="enviar()">
+    <div id="res"></div>
+
+    <script>
+        function enviar(){
+            var p = document.getElementById('p').value // A solução foi incerir o ".value"
+            var res = document.getElementById('res')
+            
+            if (p == 'Brasil'){
+                res.innerHTML = 'Nativo';
+            }else {
+                res.innerHTML = 'gringo';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -5,21 +5,21 @@ https://www.youtube.com/watch?v=f5es-PpaUI8&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIb
 function verificar(){
     var data = new Date()
     var ano = data.getFullYear()
-    var fano = document.getElementById('txtano')
-    var fano = Number(fano.value)
+    var nasciano = document.getElementById('txtano')
+    var nasciano = Number(nasciano.value)
     var res = document.getElementById('res')
-    if (fano == 0 || fano > ano ){
-        window.alert('[ERRO]Verifique os dados e tente novamente!')
+    if (nasciano == 0 || nasciano > ano ){
+        window.alert('[ERRO]\nVerifique os dados e tente novamente!')
     } else {
         var fsex = document.getElementsByName('radsex')
-        var idade = ano - fano//Number(fano.value)
+        var idade = ano - nasciano//Number(fano.value)
         var genero = ''
         var img = document.createElement('img')
         img.setAttribute('id','')
         if (fsex[0].checked){
-            genero = 'Homem'
+            genero = 'Masculino'
             if (idade >= 0 && idade < 10){
-                img.setAttribute('src', 'bebe-m.jpg')
+                img.src ='bebe-m.jpg' // forma reduzida
             } else if (idade >= 10 && idade < 21){
                 img.setAttribute('src', 'jovem-m.png')
             } else if (idade < 50){
@@ -28,11 +28,11 @@ function verificar(){
                 img.setAttribute('src', 'idoso.png')
             }
         } else if(fsex[1].checked) {
-            genero = 'Mulher'
+            genero = 'Feminino'
             if (idade >= 0 && idade < 10){
                 img.setAttribute('src', 'bebe-f.jpg')
             } else if (idade >= 10 && idade < 21){
-                img.setAttribute('src', 'jovem-f.png')
+                img.src = 'jovem-f.jpg'//Forma mais econômica de chamar a foto.
             } else if (idade < 50){
                 img.setAttribute('src', 'mulher.png')
             } else {

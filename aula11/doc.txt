@@ -1,0 +1,5 @@
+https://www.youtube.com/watch?v=cOdG4eACN2A&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm&index=16
+
+
+não funcionou
+Utilizando shat gpt descobri aneccessidade de utilizar ".value"após achamada do var.
